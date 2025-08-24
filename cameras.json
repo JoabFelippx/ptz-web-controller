@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "name": "Camera da biblioteca",
+    "broker_uri": "amqp://guest:guest@10.10.2.211:30000",
+    "gateway_id": 6
+  }
+]

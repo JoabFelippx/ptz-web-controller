@@ -1,0 +1,9 @@
+Flask
+is-wire
+is-msgs
+six
+Flask-SocketIO
+eventlet
+python-engineio
+python-socketio
+numpy

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center">
+    <h2><i class="bi bi-joystick"></i> Controle: {{ camera.name }}</h2>
+    <a href="{{ url_for('index') }}" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Voltar</a>
+</div>
+<p class="text-muted">Gateway ID: {{ camera.gateway_id }}</p>
+<hr>
+
+<div class="row">
+    <div class="col-lg-7">
+        <div class="video-container bg-dark mb-3">
+            <img id="video-stream-image" src="" alt="Video Stream" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="text-center">
+            <div id="status-message" class="mb-3"></div>
+            
+            <input type="hidden" id="camera-id" value="{{ camera.id }}">
+
+            <div class="ptz-controls" id="ptz-control-panel">
+                <div class="ptz-grid">
+                    <div></div>
+                    <button class="btn btn-lg btn-dark ptz-btn" data-command="tilt_up"><i class="bi bi-arrow-up-circle-fill"></i></button>
+                    <div></div>
+                    <button class="btn btn-lg btn-dark ptz-btn" data-command="pan_left"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <div class="ptz-center"><i class="bi bi-camera-video"></i></div>
+                    <button class="btn btn-lg btn-dark ptz-btn" data-command="pan_right"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                    <div></div>
+                    <button class="btn btn-lg btn-dark ptz-btn" data-command="tilt_down"><i class="bi bi-arrow-down-circle-fill"></i></button>
+                    <div></div>
+                </div>
+
+                <div class="zoom-controls mt-4">
+                    <button class="btn btn-lg btn-dark ptz-btn" data-command="zoom_in"><i class="bi bi-zoom-in"></i></button>
+                    <button class="btn btn-lg btn-dark ptz-btn" data-command="zoom_out"><i class="bi bi-zoom-out"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

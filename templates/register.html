@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Registrar Nova Câmera</h2>
+<hr>
+<div class="card">
+    <div class="card-body">
+        <form action="{{ url_for('register') }}" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome da Câmera</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Ex: Câmera do Estacionamento" required>
+            </div>
+            <div class="mb-3">
+                <label for="broker_uri" class="form-label">URI do Broker AMQP</label>
+                <input type="text" class="form-control" id="broker_uri" name="broker_uri" value="amqp://guest:guest@10.10.2.211:30000" required>
+            </div>
+            <div class="mb-3">
+                <label for="gateway_id" class="form-label">ID do Gateway da Câmera</label>
+                <input type="number" class="form-control" id="gateway_id" name="gateway_id" placeholder="Ex: 6" required>
+            </div>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
