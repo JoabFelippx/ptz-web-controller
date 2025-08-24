@@ -1,7 +1,7 @@
 # 📹 Controlador de Câmeras PTZ com Flask
 ![Status: Work in Progress](https://img.shields.io/badge/Status-Work%20in%20Progress-yellow)
 
-Uma aplicação web simples construída com Python e Flask para controlar múltiplas câmeras PTZ (Pan-Tilt-Zoom) através de uma interface amigável. A comunicação com as câmeras é feita via (pub/sub) utilizando a biblioteca `is-wire` para abstração da comunicação com o broker, e o stream de vídeo é exibido em tempo real na interface.
+Uma aplicação web simples construída com Python e Flask para controlar as múltiplas câmeras PTZ (Pan-Tilt-Zoom) do [LabSEA](https://github.com/Lab-SEA) através de uma interface web. A comunicação com as câmeras é feita via (pub/sub) utilizando a biblioteca `is-wire` para abstração da comunicação com o broker, e o stream de vídeo é exibido em tempo real na interface.
 
 
 ## ✨ Funcionalidades
