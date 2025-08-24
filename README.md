@@ -25,9 +25,6 @@ Uma aplicação web simples construída com Python e Flask para controlar múlti
 
 -   **Frontend:**
     -   HTML5, CSS3, JavaScript
-    -   [Bootstrap 5](https://getbootstrap.com/) para a interface e responsividade.
-    -   [Bootstrap Icons](https://icons.getbootstrap.com/)
-    -   [Socket.IO Client](https://socket.io/docs/v4/client-api/)
 
 -   **Infraestrutura:**
     -   Protocolo **AMQP** (ex: [RabbitMQ](https://www.rabbitmq.com/)) como broker de mensagens para os comandos PTZ e recebimento dos frames.
