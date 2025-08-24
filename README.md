@@ -6,7 +6,7 @@ Uma aplicação web simples construída com Python e Flask para controlar múlti
 
 ## ✨ Funcionalidades
 
--   **Interface Web Responsiva:** Controlar as câmeras do [LabSEA](https://github.com/Lab-SEA).
+-   **Interface Web Responsiva:** Controlar as câmeras PTZ do [LabSEA](https://github.com/Lab-SEA).
 -   **Visualização em Tempo Real:** Stream de vídeo da câmera selecionada diretamente na página de controle, utilizando WebSockets.
 -   **Controles PTZ Completos:** Comandos de Pan (Esquerda/Direita), Tilt (Cima/Baixo) e Zoom (In/Out) através de botões intuitivos.
 -   **Gerenciamento de Múltiplas Câmeras:** Cadastre novas câmeras e selecione qual deseja controlar a partir de uma lista.
