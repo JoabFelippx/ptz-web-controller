@@ -33,7 +33,24 @@ Uma aplicação web simples construída com Python e Flask para controlar as mú
 
 Você pode rodar esta aplicação de duas maneiras: usando Docker ou manualmente em um ambiente local.
 
-### Opção 1: Usando Docker
+### Opção 1: Rodar com um único comando Docker (Mais Rápido)
+
+Este método usa a imagem pré-construída do Docker Hub e é ideal para rodar a aplicação rapidamente sem clonar o repositório.
+
+1.  **Crie o arquivo `cameras.json`:**
+    - Em uma pasta no seu computador, crie um arquivo `cameras.json`. Você pode começar com uma lista vazia: `[]`.
+
+2.  **Execute o container:**
+    - Abra um terminal **nessa mesma pasta** e rode o comando:
+    ```bash
+    docker run -d -p 5000:5000 --name ptz_app -v "$(pwd)/cameras.json:/app/cameras.json" joabfelippe30/web-ptz-controller:v1
+    ```
+    *(No Command Prompt do Windows, use `"%cd%"` no lugar de `$(pwd)`)*
+
+3.  **Acesse a aplicação** em `http://localhost:5000`.
+
+
+### Opção 2: Usando Docker Compose
 
 ### Pré-requisitos:
 - Docker
@@ -42,31 +59,31 @@ Você pode rodar esta aplicação de duas maneiras: usando Docker ou manualmente
 ### Passos:
 
 1. Clone o repositório e navegue até a pasta::
-    ```
+    ```bash
     git clone https://github.com/JoabFelippx/ptz-web-controller.git
 
     cd ptz-web-controller
     ```
 2. Configure o arquivo json:
 
-    -   Certifique-se de que o arquivo ```cameras.json``` existe na raiz do projeto e contém as informações das suas câmeras (o aquivo pode estar vazio).  Se o arquivo não existir, você pode criá-lo com uma lista vazia ```[]```.
+    -   Certifique-se de que o arquivo `cameras.json` existe na raiz do projeto e contém as informações das suas câmeras (o aquivo pode estar vazio).  Se o arquivo não existir, você pode criá-lo com uma lista vazia `[]`.
 3. Inicie a aplicação com Dcoker Compose:
 
     Com esse comando você irá construir a imagem Docker (se ainda não existir) e iniciar o container em segundo plano
 
-    ```
+    ```bash
     docker-compose up -d
     ```
 
 4. Acesse a aplicação:
 
-    - Abra seu navegador e acesse: ```http://localhost:5000```
+    - Abra seu navegador e acesse: `http://localhost:5000`
 
 5. Para parar a aplicação:
-    ```
+    ```bash
     docker-compose down
     ```
-### Opção 2: Rodando manualmente
+### Opção 3: Rodando manualmente
 Use essa opção caso queira configurar o ambiente manualmente.
 ### Pré-requisitos:
 - Python 3.9 ou superior
@@ -74,7 +91,7 @@ Use essa opção caso queira configurar o ambiente manualmente.
 
 ### Passos:
 1. Clone o repositório e navegue até a pasta:
-    ```
+    ```bash
     git clone https://github.com/JoabFelippx/ptz-web-controller.git
 
     cd ptz-web-controller
@@ -82,28 +99,28 @@ Use essa opção caso queira configurar o ambiente manualmente.
 2. Crie e ative um ambiente virtual:
 
     - Para Linux 
-        ```
+        ```bash
         python3 -m venv nome_da_pasta_env
         source nome_da_pasta_env/bin/activate  
         ```
     - Para Windows
-        ``` 
+        ```bash
         python -m venv nome_da_pasta_env
         .\nome_da_pasta_env\Scripts\activate
         ```
 3. Instale as dependências:
-    ```
+    ```bash
     pip install -r requirements.txt
     ```
 4. Configure suas câmeras:
-    Edite o arquivo ```cameras.json ``` com as informações das duas câmeras (pode deixar o arquivo com uma lista vazia ```[]```).
+    Edite o arquivo `cameras.json` com as informações das duas câmeras (pode deixar o arquivo com uma lista vazia `[]`).
 
 5. Inicie o servidor Flask:
-    ```
+    ```bash
     python app.py
     ```
 6. Acesse a aplicação:
-    - Abra seu navegador e acesse: ```http://localhost:5000```
+    - Abra seu navegador e acesse: `http://localhost:5000`
 ## 📂 Estrutura do Projeto
 
 ```plaintext
