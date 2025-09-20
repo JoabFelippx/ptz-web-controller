@@ -29,6 +29,81 @@ Uma aplicação web simples construída com Python e Flask para controlar as mú
 -   **Infraestrutura:**
     -   Protocolo **AMQP** (ex: [RabbitMQ](https://www.rabbitmq.com/)) como broker de mensagens para os comandos PTZ e recebimento dos frames.
 
+## Como Rodar o Projeto 
+
+Você pode rodar esta aplicação de duas maneiras: usando Docker ou manualmente em um ambiente local.
+
+### Opção 1: Usando Docker
+
+### Pré-requisitos:
+- Docker
+- Dcoker Compose
+
+### Passos:
+
+1. Clone o repositório e navegue até a pasta::
+    ```
+    git clone https://github.com/JoabFelippx/ptz-web-controller.git
+
+    cd ptz-web-controller
+    ```
+2. Configure o arquivo json:
+
+    -   Certifique-se de que o arquivo ```cameras.json``` existe na raiz do projeto e contém as informações das suas câmeras (o aquivo pode estar vazio).  Se o arquivo não existir, você pode criá-lo com uma lista vazia ```[]```.
+3. Inicie a aplicação com Dcoker Compose:
+
+    Com esse comando você irá construir a imagem Docker (se ainda não existir) e iniciar o container em segundo plano
+
+    ```
+    docker-compose up -d
+    ```
+
+4. Acesse a aplicação:
+
+    - Abra seu navegador e acesse: ```http://localhost:5000```
+
+5. Para parar a aplicação:
+    ```
+    docker-compose down
+    ```
+### Opção 2: Rodando manualmente
+Use essa opção caso queira configurar o ambiente manualmente.
+### Pré-requisitos:
+- Python 3.9 ou superior
+- Pip
+
+### Passos:
+1. Clone o repositório e navegue até a pasta:
+    ```
+    git clone https://github.com/JoabFelippx/ptz-web-controller.git
+
+    cd ptz-web-controller
+    ```
+2. Crie e ative um ambiente virtual:
+
+    - Para Linux 
+        ```
+        python3 -m venv nome_da_pasta_env
+        source nome_da_pasta_env/bin/activate  
+        ```
+    - Para Windows
+        ``` 
+        python -m venv nome_da_pasta_env
+        .\nome_da_pasta_env\Scripts\activate
+        ```
+3. Instale as dependências:
+    ```
+    pip install -r requirements.txt
+    ```
+4. Configure suas câmeras:
+    Edite o arquivo ```cameras.json ``` com as informações das duas câmeras (pode deixar o arquivo com uma lista vazia ```[]```).
+
+5. Inicie o servidor Flask:
+    ```
+    python app.py
+    ```
+6. Acesse a aplicação:
+    - Abra seu navegador e acesse: ```http://localhost:5000```
 ## 📂 Estrutura do Projeto
 
 ```plaintext
