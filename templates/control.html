@@ -8,7 +8,7 @@
 <p class="text-muted">Gateway ID: {{ camera.gateway_id }}</p>
 <hr>
 
-<div class="row">
+<div class="row align-items-center">
     <div class="col-lg-7">
         <div class="video-container bg-dark mb-3">
             <img id="video-stream-image" src="" alt="Video Stream" class="img-fluid">
@@ -27,7 +27,7 @@
                     <button class="btn btn-lg btn-dark ptz-btn" data-command="tilt_up"><i class="bi bi-arrow-up-circle-fill"></i></button>
                     <div></div>
                     <button class="btn btn-lg btn-dark ptz-btn" data-command="pan_left"><i class="bi bi-arrow-left-circle-fill"></i></button>
-                    <div class="ptz-center"><i class="bi bi-camera-video"></i></div>
+                    <button class="btn btn-lg btn-dark ptz-btn ptz-center" data-command="home"><i class="bi bi-house-fill"></i></button>
                     <button class="btn btn-lg btn-dark ptz-btn" data-command="pan_right"><i class="bi bi-arrow-right-circle-fill"></i></button>
                     <div></div>
                     <button class="btn btn-lg btn-dark ptz-btn" data-command="tilt_down"><i class="bi bi-arrow-down-circle-fill"></i></button>
@@ -38,6 +38,21 @@
                     <button class="btn btn-lg btn-dark ptz-btn" data-command="zoom_in"><i class="bi bi-zoom-in"></i></button>
                     <button class="btn btn-lg btn-dark ptz-btn" data-command="zoom_out"><i class="bi bi-zoom-out"></i></button>
                 </div>
+
+                <div class="mt-4">
+                    <button id="get-info-btn" class="btn btn-info">
+                        <i class="bi bi-info-circle-fill"></i> Obter Posição Atual
+                    </button>
+                </div>
+
+                 <div id="camera-info-display" class="mt-3 p-3 border rounded bg-light" style="display: none;">
+                     <strong>Posição Atual:</strong>
+                     <ul class="list-unstyled mb-0">
+                         <li><strong>Pan (X):</strong> <span id="info-x">-</span></li>
+                         <li><strong>Tilt (Y):</strong> <span id="info-y">-</span></li>
+                         <li><strong>Zoom (Z):</strong> <span id="info-z">-</span></li>
+                     </ul>
+                 </div>
             </div>
         </div>
     </div>
