@@ -33,7 +33,7 @@ Uma aplicação web simples construída com Python e Flask para controlar as mú
 
 Você pode rodar esta aplicação de duas maneiras: usando Docker ou manualmente em um ambiente local.
 
-### Opção 1: Rodar com um único comando Docker (Mais Rápido)
+### Opção 1: Rodar com um único comando Docker
 
 Este método usa a imagem pré-construída do Docker Hub e é ideal para rodar a aplicação rapidamente sem clonar o repositório.
 
