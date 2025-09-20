@@ -51,7 +51,7 @@ Este método usa a imagem pré-construída do Docker Hub e é ideal para rodar a
 
 
 ### Opção 2: Usando Docker Compose
-
+Este método é recomendado se você clonou o repositório e quer usar o Docker.
 ### Pré-requisitos:
 - Docker
 - Docker Compose
