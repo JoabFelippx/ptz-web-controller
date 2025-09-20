@@ -1,10 +1,10 @@
-# 📹 Controlador de Câmeras PTZ com Flask
+# Controlador de Câmeras PTZ com Flask
 ![Status: Work in Progress](https://img.shields.io/badge/Status-Work%20in%20Progress-yellow)
 
 Uma aplicação web simples construída com Python e Flask para controlar as múltiplas câmeras PTZ (Pan-Tilt-Zoom) do [LabSEA](https://github.com/Lab-SEA) através de uma interface web. A comunicação com as câmeras é feita via (pub/sub) utilizando a biblioteca `is-wire` para abstração da comunicação com o broker, e o stream de vídeo é exibido em tempo real na interface.
 
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 -   **Interface Web Responsiva:** Controlar as câmeras PTZ do [LabSEA](https://github.com/Lab-SEA).
 -   **Visualização em Tempo Real:** Stream de vídeo da câmera selecionada diretamente na página de controle, utilizando WebSockets.
@@ -13,7 +13,7 @@ Uma aplicação web simples construída com Python e Flask para controlar as mú
 -   **Persistência Simples:** As informações das câmeras são salvas em um arquivo `cameras.json`, facilitando o backup e a edição.
 -   **Arquitetura Modular:** O código é organizado com o backend (Flask) e o frontend (HTML/CSS/JS) devidamente separados.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 -   **Backend:**
     -   [Python 3](https://www.python.org/)
@@ -123,7 +123,7 @@ Use essa opção caso queira configurar o ambiente manualmente.
     - Abra seu navegador e acesse: `http://localhost:5000`
 
 
-## 📖 Uso
+## Uso
 
 1.  **Acesse a página inicial** para ver a lista de câmeras.
 
@@ -137,7 +137,7 @@ Use essa opção caso queira configurar o ambiente manualmente.
 
 6. Para excluir uma câmera, clique no botão **"Remover"** no card correspondente na página inicial e confirme a ação.
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 ```plaintext
 /ptz-web-controller
 |
