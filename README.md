@@ -34,20 +34,29 @@ Uma aplicação web simples construída com Python e Flask para controlar as mú
 ```plaintext
 /ptz-web-controller
 |
-|-- app.py                   
-|-- camera_controller.py     
-|-- cameras.json            
-|-- requirements.txt        
-|-- README.md                
-|
-|-- templates/               
-|   |-- base.html
-|   |-- index.html
-|   |-- register.html
-|   |-- control.html
-|
-|-- static/                  
+|-- static/
 |   |-- css/
 |   |   |-- style.css
+|   |-- images/
+|   |   |-- LOGO-PROV-SEM-FUNDO.ico
+|   |   |-- LOGO-PROV-SEM-FUNDO.png
+|   |   |-- LOGO.png
+|   |   |-- OLHO-PEIXE-CAMERA.ico
 |   |-- js/
+|       |-- index.js
 |       |-- main.js
+|
+|-- templates/
+|   |-- base.html
+|   |-- control.html
+|   |-- index.html
+|   |-- register.html
+|
+|-- app.py
+|-- camera_controller.py
+|-- cameras.json
+|-- docker-compose.yml
+|-- Dockerfile
+|-- README.md
+|-- requirements.txt
+|-- streamChannel.py
