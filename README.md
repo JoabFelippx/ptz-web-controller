@@ -54,7 +54,7 @@ Este método usa a imagem pré-construída do Docker Hub e é ideal para rodar a
 
 ### Pré-requisitos:
 - Docker
-- Dcoker Compose
+- Docker Compose
 
 ### Passos:
 
@@ -100,13 +100,13 @@ Use essa opção caso queira configurar o ambiente manualmente.
 
     - Para Linux 
         ```bash
-        python3 -m venv nome_da_pasta_env
-        source nome_da_pasta_env/bin/activate  
+        python3 -m venv venv
+        source venv/bin/activate  
         ```
     - Para Windows
         ```bash
-        python -m venv nome_da_pasta_env
-        .\nome_da_pasta_env\Scripts\activate
+        python -m venv venv
+        .\venv\Scripts\activate
         ```
 3. Instale as dependências:
     ```bash
@@ -121,8 +121,23 @@ Use essa opção caso queira configurar o ambiente manualmente.
     ```
 6. Acesse a aplicação:
     - Abra seu navegador e acesse: `http://localhost:5000`
-## 📂 Estrutura do Projeto
 
+
+## 📖 Uso
+
+1.  **Acesse a página inicial** para ver a lista de câmeras.
+
+2.  Clique em **"Registrar Nova Câmera"** para adicionar uma nova câmera, preenchendo o Nome, URI do Broker e Gateway ID.
+
+3.  Na página inicial, **clique no card da câmera** que deseja controlar.
+
+4.  Na página de controle, **use os botões** para movimentar a câmera, aplicar zoom ou retorná-la à posição inicial (Home).
+
+5.  Para obter as coordenadas atuais, clique em **"Obter Posição Atual"**.
+
+6. Para excluir uma câmera, clique no botão **"Remover"** no card correspondente na página inicial e confirme a ação.
+
+## 📂 Estrutura do Projeto
 ```plaintext
 /ptz-web-controller
 |
