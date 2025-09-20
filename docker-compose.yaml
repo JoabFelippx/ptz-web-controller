@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  ptz-controller:
+  
+    image: joabfelippe30/web-ptz-controller:v1
+    
+    container_name: ptz_controller_container
+    
+    restart: unless-stopped
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ./cameras.json:/app/cameras.json
